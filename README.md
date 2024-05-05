@@ -58,3 +58,11 @@ All commands are run from the root of the project, from a terminal:
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 ## TODO:
+
+- [ ] Blog page bottom navigation bar
+- [ ] Friendly link page
+- [ ] Bottom comment section
+- [ ] One click back to the bottom button
+- [ ] Article tags
+- [ ] Global search box
+- [ ] Night mode

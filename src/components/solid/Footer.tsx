@@ -1,5 +1,4 @@
 import styles from "./Footer.module.scss";
-import cSrc from "../../assets/svgs/c.svg";
 import c2Src from "../../assets/svgs/c2.svg";
 import astroSrc from "../../assets/svgs/astro.svg";
 import solidSrc from "../../assets/svgs/solid.svg";

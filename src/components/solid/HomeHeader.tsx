@@ -1,18 +1,18 @@
 import styles from "./HomeHeader.module.scss";
-import avatarSrc from "../../assets/avatar.png";
+// import avatarSrc from "../../assets/avatar.png";/
 import githubSrc from "../../assets/svgs/github.svg";
 import gmailSrc from "../../assets/svgs/gmail.svg";
 import rssSrc from "../../assets/svgs/rss.svg";
-import { createSignal, onMount } from "solid-js";
+// import { createSignal, onMount } from "solid-js";
 import exampleSrc from "../../assets/blog-placeholder-about.jpg";
 export default function HomeHeader() {
-  const [isPhone, setIsPhone] = createSignal<boolean>(false);
+  // const [isPhone, setIsPhone] = createSignal<boolean>(false);
 
-  onMount(() => {
-    const userAgent = window.navigator.userAgent;
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(userAgent);
-    setIsPhone(isMobile);
-  });
+  // onMount(() => {
+  //   const userAgent = window.navigator.userAgent;
+  //   const isMobile = /iPhone|iPad|iPod|Android/i.test(userAgent);
+  //   setIsPhone(isMobile);
+  // });
 
   return (
     <div class={styles["home-header-container"]}>
@@ -29,10 +29,10 @@ export default function HomeHeader() {
             <a href="https://github.com/BQXBQX">
               <img src={githubSrc.src} width={27} />
             </a>
-            <a href="boqingxin14@gmail.com">
+            <a href="https://boqingxin14@gmail.com">
               <img src={gmailSrc.src} width={30} />
             </a>
-            <a>
+            <a href="rss.xml">
               <img src={rssSrc.src} width={23} />
             </a>
           </div>
