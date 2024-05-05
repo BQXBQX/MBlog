@@ -8,8 +8,6 @@ git clone https://github.com/BQXBQX/MBlog.git
 
 > 🧑‍🚀 This is the blog template powered by astro and solidjs
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
 ## 🚀 Project Structure
 
 Inside of your MBlog project, you'll see the following folders and files:
@@ -36,7 +34,7 @@ Inside of your MBlog project, you'll see the following folders and files:
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components. I use solid as my components framework。
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components. I use solid as my components framework.
 
 The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
 
