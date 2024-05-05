@@ -1,0 +1,10 @@
+.home-container {
+  padding: 28px 0 40px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: inset 0px 4px 4px var(--bg-300);
+  background-color: var(--bg-100);
+}

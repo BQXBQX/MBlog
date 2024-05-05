@@ -1,0 +1,117 @@
+@property --blue-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 35%;
+}
+
+@property --yellow-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 65%;
+}
+
+@property --orange-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 25%;
+}
+@property --green-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@mixin animation($name, $time, $count) {
+  animation-name: $name;
+  animation-duration: $time;
+  animation-timing-function: var(--cubic-bezier);
+  animation-fill-mode: forwards;
+  animation-iteration-count: $count;
+}
+
+.home-header-container {
+  // --my-image: url("../../assets/home-picture.png");
+  // background-image: var(--my-image);
+  // background-color: var(--bg-200);
+
+  background: radial-gradient(
+      circle at var(--blue-position) 30%,
+      #20afff,
+      transparent
+    ),
+    radial-gradient(circle at var(--yellow-position) 35%, #ffce20, transparent),
+    radial-gradient(circle at var(--orange-position) 85%, #ff8b20, transparent),
+    radial-gradient(circle at 65% var(--green-position), #20ffd7, transparent);
+  @include animation(background-animation, 5s, infinite);
+  background-color: var(--bg-200);
+  background-position: center center;
+  height: 13em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .home-header-content {
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 0px 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    justify-content: space-between;
+    // left: 5%;
+    // bottom: 20%;
+    // border-radius: 10px;
+    // backdrop-filter: blur(8px);
+    // border-radius: 10px;
+    // box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.25),
+    //   4px 4px 4px rgba(0, 0, 0, 0.1);
+    .avatar {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .home-header-message {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: bold;
+      color: var(--accent-200);
+      .title {
+        font-size: 24px;
+      }
+      .home-header-message-svg-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .home-header-content {
+    padding: 0px 20px !important;
+    .title {
+      font-size: 20px !important;
+    }
+    .avatar {
+      border-radius: 10px !important;
+      width: 55px !important;
+      height: 55px !important;
+    }
+  }
+}
+
+@keyframes background-animation {
+  50% {
+    --blue-position: 45%;
+    --yellow-position: 55%;
+    --orange-position: 35%;
+    --green-position: 120%;
+  }
+}

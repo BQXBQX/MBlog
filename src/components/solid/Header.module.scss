@@ -1,0 +1,118 @@
+@mixin svg-item-more {
+  position: absolute;
+  height: 3px;
+  background-color: var(--accent-200);
+  border-radius: 5px;
+  transition: all 0.5s var(--cubic-bezier);
+  box-sizing: border-box;
+}
+@mixin svg-item-wrong {
+  width: 100%;
+  transform-origin: center;
+}
+
+.header-container {
+  top: 0px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s var(--cubic-bezier);
+  height: 50px;
+  overflow: hidden;
+  &.show-options {
+    height: 192px;
+  }
+  .header-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    .site-title {
+      font-size: 20px;
+      font-weight: bolder;
+      color: var(--accent-200);
+      @media (max-width: 720px) {
+        font-size: 18px !important;
+      }
+    }
+    .header-link-container {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      span {
+        mix-blend-mode: difference;
+      }
+    }
+    .more-svg-container {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      position: relative;
+      .top {
+        top: 0;
+        width: 85%;
+        @include svg-item-more();
+        &.top-clicked {
+          top: 50%;
+          transform: rotate(45deg) translateY(-70.71%);
+          @include svg-item-wrong();
+        }
+      }
+      .middle {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 90%;
+        @include svg-item-more();
+        &.middle-clicked {
+          opacity: 0;
+        }
+      }
+      .bottom {
+        bottom: 0;
+        width: 70%;
+        @include svg-item-more();
+        &.bottom-clicked {
+          transform: rotate(-45deg) translateY(70.71%);
+          bottom: 50%;
+          @include svg-item-wrong();
+        }
+      }
+    }
+  }
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    .link-item {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      span {
+        color: var(--accent-200);
+      }
+    }
+    .divider {
+      height: 1px;
+      box-shadow: inset 4px 4px 4px var(--bg-300);
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .header-container {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+@mixin footer-item {
+  display: flex;
+  gap: 6px;
+}
+.footer-container {
+  height: 120px;
+  width: 100%;
+  font-weight: bold;
+  background-color: var(--bg-100);
+  box-sizing: border-box;
+  box-shadow: inset 0px -2px 4px var(--bg-300);
+  .divider {
+    height: 1px;
+    width: 100%;
+    background-color: var(--bg-300);
+  }
+  .footer-content {
+    width: 100%;
+    height: calc(100% - 1px);
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .footer-left {
+      @include footer-item();
+    }
+    .footer-right {
+      @include footer-item();
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10%;
+    justify-content: center !important;
+    padding: unset !important;
+    align-items: center;
+  }
+}

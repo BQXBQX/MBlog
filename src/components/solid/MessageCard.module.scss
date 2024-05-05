@@ -1,0 +1,47 @@
+@mixin main-content-span {
+  color: var(--primary-300);
+}
+
+.message-card-container {
+  height: fit-content;
+  width: 95%;
+  background-color: var(--bg-200);
+  padding: 14px 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px var(--bg-300);
+  box-sizing: border-box;
+  cursor: pointer;
+  .message-card-title {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: var(--accent-200);
+    transition: all var(--cubic-bezier) 0.5s;
+    margin: 0.1em 0 0 0;
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--bg-300);
+      transition: all var(--cubic-bezier) 0.5s;
+      margin-top: 0.1em;
+    }
+  }
+  .message-date-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+    @include main-content-span();
+    transition: all var(--cubic-bezier) 0.5s;
+  }
+  .message-description-container {
+    @include main-content-span();
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .message-card-container {
+    padding: 14px 14px 14px 14px;
+    width: 93%;
+  }
+}
