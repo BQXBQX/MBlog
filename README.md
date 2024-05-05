@@ -67,3 +67,5 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 - [ ] Global search box
 - [ ] Night mode
 - [ ] Optimised font file size
+- [ ] Overall blog catalogue
+- [ ] Back-office management system
