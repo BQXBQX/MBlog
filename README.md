@@ -69,3 +69,4 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 - [ ] Optimised font file size
 - [ ] Overall blog catalogue
 - [ ] Back-office management system
+- [ ] 404 page

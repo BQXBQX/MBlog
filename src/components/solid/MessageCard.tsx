@@ -18,9 +18,9 @@ export default function MessageCard({
 }: MessageCardProps) {
   return (
     <a class={styles["message-card-container"]} href={url}>
-      <h3 class={styles["message-card-title"]}>
+      <h4 class={styles["message-card-title"]}>
         {title} <div class={styles.divider} />
-      </h3>
+      </h4>
       <div class={styles["message-date-container"]}>
         <img src={calendarSrc.src} width={18} />
         <FormattedDate time={time as Date} />
