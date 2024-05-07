@@ -17,7 +17,7 @@ export const Waline = (props: WalineOptions) => {
     walineRef = init({
       ...props,
       el: containerRef,
-      serverURL: "http://6qx.top:8360/",
+      serverURL: "http://localhost:8360/",
       emoji: [
         "//unpkg.com/@waline/emojis@1.2.0/tw-emoji",
         "//unpkg.com/@waline/emojis@1.2.0/tieba",

@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 export default function Header(props: HeaderProps) {
-  const [isPhone, setIsPhone] = createSignal<boolean>(false);
+  const [isPhone, setIsPhone] = createSignal<boolean | undefined>(undefined);
   const [isShowOptions, setIsShowOptions] = createSignal<boolean>(false);
 
   onMount(() => {
