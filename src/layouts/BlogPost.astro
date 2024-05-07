@@ -5,6 +5,7 @@ import Header from "../components/solid/Header";
 import Footer from "../components/solid/Footer";
 import { BlogTitle } from "../components/solid/BlogTitle";
 import { End } from "../components/solid/End";
+import { Waline } from "../components/solid/Waline";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -71,12 +72,16 @@ const { title, description, pubDate, heroImage } = Astro.props;
               <div>
                 <slot />
                 <End />
+                <Waline
+                  client:only="solid-js"
+                  serverURL="http://6qx.top:8360/"
+                />
               </div>
             </div>
           </div>
         </div>
+        <Footer />
       </article>
-      <Footer />
     </main>
   </body>
 </html>

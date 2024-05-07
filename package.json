@@ -19,5 +19,8 @@
     "sass": "^1.72.0",
     "solid-js": "^1.8.15",
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@waline/client": "^3.1.3"
   }
 }

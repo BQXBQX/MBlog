@@ -61,7 +61,7 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 
 - [ ] Blog page bottom navigation bar
 - [ ] Friendly link page
-- [ ] Bottom comment section
+- [x] Bottom comment section
 - [ ] One click back to the bottom button
 - [ ] Article tags
 - [ ] Global search box
