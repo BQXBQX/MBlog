@@ -72,10 +72,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
               <div>
                 <slot />
                 <End />
-                <Waline
-                  client:only="solid-js"
-                  serverURL="http://6qx.top:8360/"
-                />
+                <Waline client:only="solid-js" />
               </div>
             </div>
           </div>

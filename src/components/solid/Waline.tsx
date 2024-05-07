@@ -7,7 +7,7 @@ import {
 import "@waline/client/style";
 import { createEffect, onCleanup, onMount } from "solid-js";
 
-export type WalineOptions = Omit<WalineInitOptions, "el">;
+export type WalineOptions = Omit<WalineInitOptions, "el" | "serverURL">;
 
 export const Waline = (props: WalineOptions) => {
   let containerRef: HTMLDivElement;
