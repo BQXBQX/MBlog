@@ -28,7 +28,6 @@ export default function MessageCard({
       <div class={styles["message-description-container"]}>
         <span>{description}</span>
       </div>
-      <span></span>
     </a>
   );
 }
