@@ -26,7 +26,7 @@ export default function MessageCard({
         <FormattedDate time={time as Date} />
       </div>
       <div class={styles["message-description-container"]}>
-        <span>{description}</span>
+        <span>{description}1</span>
       </div>
     </a>
   );
