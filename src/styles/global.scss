@@ -155,11 +155,15 @@ img {
   max-width: 100%;
 }
 code {
+  all: unset;
   padding: 2px 5px;
   background-color: var(--bg-200);
   border-radius: 4px;
   font-size: 16px;
   font-family: "Fira Mono", monospace;
+  span {
+    font-family: "Fira Mono", monospace;
+  }
 }
 pre {
   padding: 0.6em 0.8em 0.6em 0.8em;
