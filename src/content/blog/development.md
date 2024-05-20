@@ -1,7 +1,7 @@
 ---
 title: "MBlog 开发文档"
 description: "MBlog，基于 astro & solid.js 所开发的博客系统。本文记录本博客的开发文档，并作为文章展示的测试样例。展示项目整体架构和未来的TODO"
-pubDate: " Jul 08 2022"
+pubDate: "2024-05-20 11:21:27"
 heroImage: "/img/development/developHero.jpg"
 ---
 
