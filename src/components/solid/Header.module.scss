@@ -1,11 +1,12 @@
 $font-color: #f69169;
 
+
 @mixin svg-item-more {
   position: absolute;
   height: 3px;
   background-color: $font-color;
   border-radius: 5px;
-  transition: all 0.5s $font-color;
+  transition: all 0.5s var(--cubic-bezier);
   box-sizing: border-box;
 }
 @mixin svg-item-wrong {
@@ -112,7 +113,7 @@ $font-color: #f69169;
       justify-content: center;
       flex-direction: column;
       span {
-        color: $font-color;
+        color: var(--accent-200);
       }
     }
     .divider {
