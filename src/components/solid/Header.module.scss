@@ -1,9 +1,11 @@
+$font-color: #f69169;
+
 @mixin svg-item-more {
   position: absolute;
   height: 3px;
-  background-color: var(--accent-200);
+  background-color: $font-color;
   border-radius: 5px;
-  transition: all 0.5s var(--cubic-bezier);
+  transition: all 0.5s $font-color;
   box-sizing: border-box;
 }
 @mixin svg-item-wrong {
@@ -14,12 +16,13 @@
 .header-container {
   top: 0px;
   position: fixed;
-  z-index: 1;
+  z-index: 30;
   width: 100%;
   max-width: 100%;
   backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(20, 20, 20, 0.4);
   transition: all 0.5s var(--cubic-bezier);
+  mix-blend-mode: difference;
   height: 50px;
   overflow: hidden;
   &.show-options {
@@ -33,26 +36,35 @@
     height: 50px;
     align-items: center;
     background-color: transparent;
-    z-index: 1;
+    z-index: 5;
     padding: 20px;
     box-sizing: border-box;
+    color: $font-color;
     .site-title {
+      position: relative;
+      z-index: 50;
       font-size: 20px;
       font-weight: bolder;
-      color: var(--accent-200);
+      color: $font-color;
       @media (max-width: 720px) {
         font-size: 18px !important;
       }
     }
     .header-link-container {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
       display: flex;
       flex-direction: row;
       gap: 15px;
       span {
-        mix-blend-mode: difference;
+        color: $font-color;
       }
     }
     .more-svg-container {
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
       width: 18px;
       height: 18px;
       box-sizing: border-box;
@@ -100,7 +112,7 @@
       justify-content: center;
       flex-direction: column;
       span {
-        color: var(--accent-200);
+        color: $font-color;
       }
     }
     .divider {
