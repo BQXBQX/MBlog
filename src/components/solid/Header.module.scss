@@ -113,7 +113,7 @@ $font-color: #f69169;
       justify-content: center;
       flex-direction: column;
       span {
-        color: var(--accent-200);
+        color: $font-color;
       }
     }
     .divider {
