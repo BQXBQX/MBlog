@@ -337,4 +337,4 @@ export const Main = () => {
 
 这就是上文的全部内容了，如果有任何的疑问都可以在评论区留言哦。（偷偷告诉你 `MapLibre GL` 是不支持自定义地图的，艹，当时因为这个踩坑踩 🐴 了）。
 
-![Untitled](MapLibre/Untitled.png)
+![end](/img/MapLibre/Untitled.png)
